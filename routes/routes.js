@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   const task = new Task(req.body);
   task.save((err, doc) => {
-    if (err) console.log;
+    if (err) console.log(err);
     res.json(doc);
   });
 });
